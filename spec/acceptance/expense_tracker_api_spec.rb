@@ -11,8 +11,6 @@ module ExpenseTracker
     end
 
     it 'records submitted expenses' do
-      pending 'Need to have a way to persist expenses'
-
       coffee = post_expense(
         'payee' => 'Music and Beans',
         'amount' => 2.75,
@@ -28,7 +26,7 @@ module ExpenseTracker
       groceries = post_expense(
         'payee' => 'Haringey Foods',
         'amount' => 5.75,
-        'date' => '2017-12-27'
+        'date' => '2017-12-22'
       )
 
       get '/expenses/2017-12-17'

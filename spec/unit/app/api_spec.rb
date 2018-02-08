@@ -68,7 +68,7 @@ module ExpenseTracker
         before do
           allow(ledger).to receive(:records_at_date)
             .with(Date.parse(date))
-            .and_return([RecordResult.new(true, 417, nil), RecordResult.new(true, 200, nil)])
+            .and_return([{expense_id: 417}, {expense_id: 200}])
         end
 
         it 'returns the expense records as JSON' do

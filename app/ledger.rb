@@ -13,7 +13,7 @@ module ExpenseTracker
     end
 
     def records_at_date(date)
-
+      DB[:expenses].where(date: date).all
     end
   end
 end

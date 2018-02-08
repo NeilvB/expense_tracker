@@ -24,7 +24,7 @@ module ExpenseTracker
       date = Date.parse(params[:date])
 
       JSON.generate(
-        @ledger.records_at_date(date).map { |record| { expense_id: record.expense_id } }
+        @ledger.records_at_date(date)
       )
     end
   end
