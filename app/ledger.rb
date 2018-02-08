@@ -5,5 +5,9 @@ module ExpenseTracker
     def record(expense)
 
     end
+
+    def records_at_date(date)
+
+    end
   end
 end
